@@ -117,3 +117,5 @@ More detailed information you can find on Readme inside the folder `qa`
 cd qa
 ./run-test.sh @tag
 ```
+
+Generated test report will be available on folder `qa\target\cucumber-html-reports`
