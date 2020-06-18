@@ -1,7 +1,9 @@
-## Demo GraphQL for karate tests
-## Feature shows football players belongs to a team and a team belongs to a league
+# Demo GraphQL for karate tests
+###### Feature shows football players belongs to a team and a team belongs to a league
 
-# Sample query:
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+
+## Sample query:
 ```
 query{
   players{
@@ -23,7 +25,7 @@ query{
 }
 ```
 
-# Query returns:
+## Query returns:
 ```
 {
   "data": {
@@ -67,25 +69,6 @@ query{
         }
       },
       {
-        "id": "3",
-        "first_name": "Simic",
-        "last_name": "Marco",
-        "team": {
-          "id": 3,
-          "name": "Persija Jakarta",
-          "is_league_winner": false,
-          "current_competitions": [
-            "Shopee Liga 1",
-            "Piala Presiden"
-          ],
-          "league": {
-            "id": 3,
-            "name": "Liga 1 Shopee",
-            "continent": "Asia"
-          }
-        }
-      },
-      {
         "id": "4",
         "first_name": "Haaland",
         "last_name": "Erling",
@@ -103,63 +86,6 @@ query{
             "continent": "Europe"
           }
         }
-      },
-      {
-        "id": "129",
-        "first_name": "Freddie",
-        "last_name": "Ljungberg",
-        "team": {
-          "id": 2,
-          "name": "Arsenal",
-          "is_league_winner": true,
-          "current_competitions": [
-            "English Premier League",
-            "Carling Cup"
-          ],
-          "league": {
-            "id": 1,
-            "name": "English Premier League",
-            "continent": "Europe"
-          }
-        }
-      },
-      {
-        "id": "130",
-        "first_name": "Freddie",
-        "last_name": "Ljungberg",
-        "team": {
-          "id": 2,
-          "name": "Arsenal",
-          "is_league_winner": true,
-          "current_competitions": [
-            "English Premier League",
-            "Carling Cup"
-          ],
-          "league": {
-            "id": 1,
-            "name": "English Premier League",
-            "continent": "Europe"
-          }
-        }
-      },
-      {
-        "id": "131",
-        "first_name": "Hanh",
-        "last_name": "Hammes",
-        "team": {
-          "id": 2,
-          "name": "Arsenal",
-          "is_league_winner": true,
-          "current_competitions": [
-            "English Premier League",
-            "Carling Cup"
-          ],
-          "league": {
-            "id": 1,
-            "name": "English Premier League",
-            "continent": "Europe"
-          }
-        }
       }
     ]
   }
@@ -173,5 +99,7 @@ query{
 `node server.js`
 
 ## Karate tests
-`cd qa`
-`./run-test.sh @tag`
+```
+cd qa
+./run-test.sh @tag
+```
