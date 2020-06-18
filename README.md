@@ -98,7 +98,7 @@ query{
 `npm install`
 
 ## Migrate database and inserting sample datas
-- First you need to install a postgresql. You can follow the instructions how to install here: https://www.postgresql.org/download/
+- First you need to install PostgreSQL. You can follow the instructions how to install here: https://www.postgresql.org/download/
 - Connect to your database: `psql -h localhost -U {YOUR_USERNAME}`
 - Create a database with the name of your preference
 - E.g. `CREATE DATABASE soccer;`
