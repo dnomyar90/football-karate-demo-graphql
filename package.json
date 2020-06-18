@@ -17,7 +17,8 @@
     "dbUser":"testing",
     "dbPort":"5432",
     "dbName":"soccer",
-    "dbHost":"localhost"
+    "dbHost":"localhost",
+    "dbPassword":""
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -3,14 +3,15 @@ const graphqlHTTP = require('express-graphql')
 const graphql = require('graphql')
 const joinMonster = require('join-monster')
 const bodyParser = require('body-parser')
+const pjson = require('./package.json');
 
 // Connect to database
 const { Client } = require('pg')
 const client = new Client({
-  host: "localhost",
-  user: "raymond",
-  password: "",
-  database: "soccer"
+  host: pjson.dbConfig.dbHost,
+  user: pjson.dbConfig.dbUser,
+  password: pjson.dbConfig.dbPassword,
+  database: pjson.dbConfig.dbName,
 })
 client.connect()
 
