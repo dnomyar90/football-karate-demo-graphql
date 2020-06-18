@@ -1,0 +1,18 @@
+       query player($id:Int!) {
+           player(id:$id) {
+               id
+               first_name
+               last_name
+               team{
+                   id
+                   name
+                   is_league_winner
+                   current_competitions
+                   league{
+                       id
+                       name
+                       continent
+                    }
+                }
+            }
+        }
