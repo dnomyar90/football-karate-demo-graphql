@@ -9,3 +9,5 @@
 `mvn clean test -Dcucumber.options="--tags @mutation" -Dtest=TestRunner`
 4. Example to run all test except the `@mutation` tag on staging (this is the default command): <br/>
 `mvn clean test -Dcucumber.options="--tags ~@mutation" -Dtest=TestRunner`
+
+Generated test report will be available on folder `target\cucumber-html-reports`
