@@ -101,7 +101,7 @@ query{
 - Create a database with the name of your liking
 - E.g. `CREATE DATABASE soccer;`
 - Specify the dbName on `package.json` based on the database name you create. Also you can specify `dbUser`, `dbPassword`, `dbPort`, `dbHost` here too
-- Run `npm run migrate_up
+- Run `npm run migrate_up`
 
 
 ## Start the GraphQL server
