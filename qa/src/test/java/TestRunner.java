@@ -27,9 +27,9 @@ public class TestRunner {
         List<String> jsonPaths = new ArrayList<>(jsonFiles.size());
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
         Configuration config = new Configuration(new File("target"), "qa");
-        // config.setSortingMethod(SortingMethod.ALPHABETICAL);
-        // ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
-        // reportBuilder.generateReports();
+        config.setSortingMethod(SortingMethod.ALPHABETICAL);
+        ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
+        reportBuilder.generateReports();
     }
 
 }
