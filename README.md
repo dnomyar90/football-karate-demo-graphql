@@ -1,7 +1,7 @@
 # Demo GraphQL for karate tests
 ###### Feature shows football players belongs to a team and a team belongs to a league
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![alt text](https://github.com/dnomyar90/football-karate-demo-graphql/blob/master/asset/gettyImageAsset.jpg?raw=true)
 
 ## Sample query:
 ```
@@ -95,8 +95,21 @@ query{
 ## Install dependencies
 `npm install`
 
+## Migrate database and inserting sample datas
+- First you need to install a postgresql first. You can check how to install here: https://www.postgresql.org/download/
+- Connect to your database: `psql -h localhost -U {YOUR_USERNAME}`
+- Create a database with the name of your liking
+- E.g. `CREATE DATABASE soccer;`
+- Specify the dbName on `package.json` based on the database name you create. Also you can specify `dbUser`, `dbPassword`, `dbPort`, `dbHost` here too
+- Run `npm run migrate_up
+
+
 ## Start the GraphQL server
 `node server.js`
+
+## Open the GraphQL interface
+Open the GraphQL interface based on the port you choose. By default the port is `4000`. 
+You can try to open: http://localhost:4000/graphql
 
 ## Karate tests
 ```
