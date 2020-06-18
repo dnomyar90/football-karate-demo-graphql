@@ -112,6 +112,7 @@ Open the GraphQL interface based on the port you choose. By default the port is 
 You can try to open: http://localhost:4000/graphql
 
 ## Karate tests
+# More detailed information you can find on Readme inside the folder qa
 ```
 cd qa
 ./run-test.sh @tag
