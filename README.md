@@ -1,5 +1,5 @@
 # Demo GraphQL for karate tests
-###### Feature shows football players belongs to a team and a team belongs to a league
+Feature shows football players belongs to a team and a team belongs to a league
 
 ![alt text](https://github.com/dnomyar90/football-karate-demo-graphql/blob/master/asset/gettyImageAsset.jpg?raw=true)
 
@@ -112,7 +112,7 @@ Open the GraphQL interface based on the port you choose. By default the port is 
 You can try to open: http://localhost:4000/graphql
 
 ## Karate tests
-# More detailed information you can find on Readme inside the folder qa
+More detailed information you can find on Readme inside the folder `qa`
 ```
 cd qa
 ./run-test.sh @tag
