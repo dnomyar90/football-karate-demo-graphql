@@ -1,5 +1,7 @@
 # Demo GraphQL for karate tests
-Sample GraphQL apps about football players belongs to a team and a team belongs to a league. You can toy around and testing the queries and mutation using karate test project provided in folder `qa`. This sample application is provided to make people more aware about how powerful yet simplistic karate test framework is.
+Sample GraphQL apps about football players belongs to a team and a team belongs to a league.
+
+You can toy around and testing the queries and mutation using karate test project provided in folder `qa`. This sample application is intended to make people more aware about how powerful yet easy to use karate is.
 
 ![alt text](https://github.com/dnomyar90/football-karate-demo-graphql/blob/master/asset/gettyImageAsset.jpg?raw=true)
 
