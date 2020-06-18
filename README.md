@@ -98,13 +98,12 @@ query{
 `npm install`
 
 ## Migrate database and inserting sample datas
-- First you need to install a postgresql first. You can check how to install here: https://www.postgresql.org/download/
+- First you need to install a postgresql. You can follow the instructions how to install here: https://www.postgresql.org/download/
 - Connect to your database: `psql -h localhost -U {YOUR_USERNAME}`
-- Create a database with the name of your liking
+- Create a database with the name of your preference
 - E.g. `CREATE DATABASE soccer;`
-- Specify the dbName on `package.json` based on the database name you create. Also you can specify `dbUser`, `dbPassword`, `dbPort`, `dbHost` here too
+- Specify the `dbName` on `package.json` based on the database name you create. You can also specify `dbUser`, `dbPassword`, `dbPort`, `dbHost` here too
 - Run `npm run migrate_up`
-
 
 ## Start the GraphQL server
 `node server.js`
