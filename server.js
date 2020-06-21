@@ -172,4 +172,6 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true
 }));
 app.use(bodyParser.json());
-app.listen(4000);
+app.listen(4000,()=>{
+   console.log("Running GraphQL at 4000 port");
+});
