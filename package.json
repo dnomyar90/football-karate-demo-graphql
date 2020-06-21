@@ -24,7 +24,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "migrate": "node-pg-migrate",
-    "migrate_up": "DATABASE_URL=postgres://$npm_package_dbConfig_dbUser@$npm_package_dbConfig_dbHost:$npm_package_dbConfig_dbPort/$npm_package_dbConfig_dbName npm run migrate up"
+    "migrate_up": "DATABASE_URL=postgres://$npm_package_dbConfig_dbUser@$npm_package_dbConfig_dbHost:$npm_package_dbConfig_dbPort/$npm_package_dbConfig_dbName npm run migrate up",
+    "migrate_up_wind": "set DATABASE_URL=postgres://%npm_package_dbConfig_dbUser%:%npm_package_dbConfig_dbPassword%@%npm_package_dbConfig_dbHost%:%npm_package_dbConfig_dbPort%/%npm_package_dbConfig_dbName%&&npm run migrate up",
   },
   "author": "",
   "license": "ISC"
