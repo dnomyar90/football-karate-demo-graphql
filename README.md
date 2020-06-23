@@ -116,8 +116,12 @@ You can try to open: http://localhost:4000/graphql
 ## Karate tests
 More detailed information you can find on Readme inside the folder `qa`
 ```
+# To run functional test
 cd qa
 ./run-test.sh @tag
+
+# To run performance test
+./run-load-test.sh
 ```
 
 Generated test report will be available on folder `qa\target\cucumber-html-reports`
