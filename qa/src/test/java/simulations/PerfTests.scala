@@ -4,10 +4,10 @@ import com.intuit.karate.gatling.PreDef._
 import io.gatling.core.Predef._
 import scala.concurrent.duration._
 
-class LoadTests extends Simulation {
+class PerfTests extends Simulation {
 
   before {
-    println("Load tests started")
+    println("Perf tests started")
   }
   
   // Amount of ramp users
@@ -35,7 +35,7 @@ class LoadTests extends Simulation {
     )
 
   after {
-    println("Load tests ended")
+    println("Perf tests ended")
   }
 
 } 
