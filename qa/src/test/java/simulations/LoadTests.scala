@@ -1,4 +1,4 @@
-package mock
+package loadtest
 
 import com.intuit.karate.gatling.PreDef._
 import io.gatling.core.Predef._
@@ -11,7 +11,7 @@ class LoadTests extends Simulation {
   }
   
   // Amount of ramp users
-  val amountRampUsers: Int = 50
+  val amountRampUsers: Int = 10
 
   // Duration of ramp
   val amountRampDuration: Int = 10
@@ -27,8 +27,8 @@ class LoadTests extends Simulation {
     )
 
   setUp(
-    playersTestMutation.inject(rampUsers(10) during 10),
-    playersTestQuery.inject(rampConcurrentUsers(1) to (5) during 10)
+    playersTestMutation.inject(rampUsers(amountRampUsers) during amountRampDuration),
+    playersTestQuery.inject(rampConcurrentUsers(1) to (5) during amountRampDuration)
     ).assertions(
         global.responseTime.max.lt(500),
         global.successfulRequests.percent.gt(95)

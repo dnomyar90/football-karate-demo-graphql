@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "core-util-is": "^1.0.2",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.1.1",
@@ -14,18 +15,18 @@
   },
   "devDependencies": {},
   "dbConfig": {
-    "dbUser":"testing",
-    "dbPort":"5432",
-    "dbName":"soccer",
-    "dbHost":"localhost",
-    "dbPassword":""
+    "dbUser": "testing",
+    "dbPort": "5432",
+    "dbName": "soccer",
+    "dbHost": "localhost",
+    "dbPassword": ""
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "migrate": "node-pg-migrate",
     "migrate_up": "DATABASE_URL=postgres://$npm_package_dbConfig_dbUser@$npm_package_dbConfig_dbHost:$npm_package_dbConfig_dbPort/$npm_package_dbConfig_dbName npm run migrate up",
-    "migrate_up_wind": "set DATABASE_URL=postgres://%npm_package_dbConfig_dbUser%:%npm_package_dbConfig_dbPassword%@%npm_package_dbConfig_dbHost%:%npm_package_dbConfig_dbPort%/%npm_package_dbConfig_dbName%&&npm run migrate up",
+    "migrate_up_wind": "set DATABASE_URL=postgres://%npm_package_dbConfig_dbUser%:%npm_package_dbConfig_dbPassword%@%npm_package_dbConfig_dbHost%:%npm_package_dbConfig_dbPort%/%npm_package_dbConfig_dbName%&&npm run migrate up"
   },
   "author": "",
   "license": "ISC"
