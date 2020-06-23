@@ -9,10 +9,12 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import cucumber.api.CucumberOptions;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.sorting.SortingMethod;
 import net.masterthought.cucumber.Configuration;
 
+@CucumberOptions(features = "classpath:features")
 public class TestRunner {
 
     @Test
