@@ -124,4 +124,5 @@ cd qa
 ./run-load-test.sh
 ```
 
-Generated test report will be available on folder `qa\target\cucumber-html-reports`
+- Functional test report will be available on folder `qa/target/cucumber-html-reports`
+- Performance test report will be available on folder `target/gatling/loadtests-`
