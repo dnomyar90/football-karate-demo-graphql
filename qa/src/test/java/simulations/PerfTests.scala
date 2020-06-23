@@ -1,4 +1,4 @@
-package loadtest
+package perftest
 
 import com.intuit.karate.gatling.PreDef._
 import io.gatling.core.Predef._
