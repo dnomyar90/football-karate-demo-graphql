@@ -121,7 +121,7 @@ cd qa
 ./run-test.sh @tag
 
 # To run performance test
-./run-load-test.sh
+./run-perf-test.sh
 ```
 
 - Functional test report will be available on folder `qa/target/cucumber-html-reports`
