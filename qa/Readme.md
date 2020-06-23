@@ -13,6 +13,6 @@
 Generated test report will be available on folder `target/cucumber-html-reports`
 
 **Running performance tests:**
-1. Run `./run-load-test.sh`
+1. Run `./run-perf-test.sh`
 
 Generated performance test report will be available on folder `target/gatling/loadtests-`
