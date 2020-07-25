@@ -1,0 +1,7 @@
+       mutation player($first_name: String!, $last_name: String!, $team_id:Int!) {
+           player(first_name:$first_name, last_name:$last_name, team_id:$team_id) {
+               id
+               first_name
+               last_name
+            }
+        }

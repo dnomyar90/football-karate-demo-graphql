@@ -1,0 +1,11 @@
+query FindAllLeagues {
+FindAllLeagues {
+...League
+}
+}
+
+fragment League on League {
+id
+name
+continent
+}

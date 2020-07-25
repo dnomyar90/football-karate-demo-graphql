@@ -12,7 +12,7 @@ Feature: Test GraphQL Insert Player (mutation)
     Scenario: Insert a player
 
     # Read GraphQL file
-    Given def query = read('graphql/insertplayer.graphql')
+     Given def query = karate.call('classpath:mutations/AddNewPlayer.js')
 
     # Declare variables for the request (in JSON format)
     # Notes: Example of using faker to generate randomized data
@@ -28,8 +28,8 @@ Feature: Test GraphQL Insert Player (mutation)
     Then status 200
 
     # Parse string as integer & assert with existing variable
-    And match response.data.player.first_name == variables.first_name
-    And match response.data.player.last_name == variables.last_name
+    And match response.data.AddNewPlayer.first_name == variables.first_name
+    And match response.data.AddNewPlayer.last_name == variables.last_name
 
     # Assert that there is no error
     And match response.errors == '#notpresent'
@@ -39,7 +39,7 @@ Feature: Test GraphQL Insert Player (mutation)
     Scenario: Insert a player with invalid first name
 
     # Read GraphQL file
-    Given def query = read('graphql/insertplayer.graphql')
+    Given def query = karate.call('classpath:mutations/AddNewPlayer.js')
 
     # Declare variables for the request (in JSON format)
     # Note that the first name is invalid since it contains number
