@@ -77,7 +77,7 @@ League._typeConfig = {
 const MutationRoot = new graphql.GraphQLObjectType({
   name: 'Mutation',
   fields: () => ({
-    player: {
+    AddNewPlayer: {
       type: Player,
       args: {
         first_name: { type: graphql.GraphQLNonNull(graphql.GraphQLString) },
@@ -103,7 +103,7 @@ const MutationRoot = new graphql.GraphQLObjectType({
 const QueryRoot = new graphql.GraphQLObjectType({
   name: 'Query',
   fields: () => ({
-    players: {
+    FindAllPlayers: {
       type: new graphql.GraphQLList(Player),
       resolve: (parent, args, context, resolveInfo) => {
         return joinMonster.default(resolveInfo, {}, sql => {
@@ -111,7 +111,7 @@ const QueryRoot = new graphql.GraphQLObjectType({
         })
       }
     },
-    player: {
+    FindPlayerByID: {
       type: Player,
       args: { id: { type: graphql.GraphQLNonNull(graphql.GraphQLInt) } },
       where: (playerTable, args, context) => `${playerTable}.id = ${args.id}`,
@@ -121,7 +121,7 @@ const QueryRoot = new graphql.GraphQLObjectType({
         })
       }
     },
-    teams: {
+    FindAllTeams: {
       type: new graphql.GraphQLList(Team),
       resolve: (parent, args, context, resolveInfo) => {
         return joinMonster.default(resolveInfo, {}, sql => {
@@ -129,7 +129,7 @@ const QueryRoot = new graphql.GraphQLObjectType({
         })
       }
     },
-    team: {
+    FindTeamByID: {
       type: Team,
       args: { id: { type: graphql.GraphQLNonNull(graphql.GraphQLInt) } },
       where: (teamTable, args, context) => `${teamTable}.id = ${args.id}`,
@@ -139,7 +139,7 @@ const QueryRoot = new graphql.GraphQLObjectType({
         })
       }
     },
-    leagues: {
+    FindAllLeagues: {
       type: new graphql.GraphQLList(League),
       resolve: (parent, args, context, resolveInfo) => {
         return joinMonster.default(resolveInfo, {}, sql => {
@@ -147,7 +147,7 @@ const QueryRoot = new graphql.GraphQLObjectType({
         })
       }
     },
-    league: {
+    FindLeagueByID: {
       type: League,
       args: { id: { type: graphql.GraphQLNonNull(graphql.GraphQLInt) } },
       where: (leagueTable, args, context) => `${leagueTable}.id = ${args.id}`,

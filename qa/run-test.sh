@@ -4,4 +4,4 @@
 # example: ./run-test.sh ~@ignore staging
 
 tags=$1
-mvn clean test -Dcucumber.options="--tags $tags" -Dtest=TestRunner
+mvn clean test -Dkarate.options="--tags $tags" -Dtest=TestRunner

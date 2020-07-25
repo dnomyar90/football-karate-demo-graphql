@@ -1,0 +1,21 @@
+query FindAllTeams {
+FindAllTeams {
+...Team
+}
+}
+
+fragment Team on Team {
+id
+name
+is_league_winner
+current_competitions
+league{
+...League
+}
+}
+
+fragment League on League {
+id
+name
+continent
+}

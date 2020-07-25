@@ -1,0 +1,30 @@
+mutation AddNewPlayer($first_name:String!, $last_name:String!,$team_id:Int!) {
+AddNewPlayer (first_name:$first_name, last_name:$last_name, team_id:$team_id){
+...Player
+}
+}
+
+fragment Player on Player {
+id
+first_name
+last_name
+team{
+...Team
+}
+}
+
+fragment Team on Team {
+id
+name
+is_league_winner
+current_competitions
+league{
+...League
+}
+}
+
+fragment League on League {
+id
+name
+continent
+}
