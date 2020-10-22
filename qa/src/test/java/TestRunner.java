@@ -75,8 +75,17 @@ class KarateExecutionHook implements ExecutionHook {
 
     @Override
     public void afterScenario(ScenarioResult result, ScenarioContext context) {
+    }
+
+    @Override
+    public boolean beforeFeature(Feature feature, ExecutionContext context) {
+        return true;
+    }
+
+    @Override
+    public void afterFeature(FeatureResult result, ExecutionContext context) {
         File f = null;
-        f = context.rootFeatureContext.feature.getPath().toFile();
+        f = context.featureContext.feature.getPath().toFile();
         String filePath = f.toString();
         int line = 0;
         Path path = Paths.get(filePath);
@@ -105,15 +114,6 @@ class KarateExecutionHook implements ExecutionHook {
             }
 
         }
-    }
-
-    @Override
-    public boolean beforeFeature(Feature feature, ExecutionContext context) {
-        return true;
-    }
-
-    @Override
-    public void afterFeature(FeatureResult result, ExecutionContext context) {
     }
 
     @Override
