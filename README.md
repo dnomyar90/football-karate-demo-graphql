@@ -125,4 +125,4 @@ cd qa
 ```
 
 - Functional test report will be available on folder `qa/target/cucumber-html-reports`
-- Performance test report will be available on folder `target/gatling/loadtests-`
+- Performance test report will be available on folder `target/gatling/loadtests`
